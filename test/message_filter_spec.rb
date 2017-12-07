@@ -1,14 +1,14 @@
 require 'spec_helper'
 require 'message_filter'
 
-RSpec.describe MessageFilter do
+RSpec.describe MessageFilter 'with argument"foo"' do
     before do
         @filter = MessageFilter.new('foo')
     end
-    it 'should detect message with NG word' do
-        expect(@filter.detect?('hello from foo')).to be true
+    it 'detects message with NG word' do
+        expect(@filter).to be_detect('hello from foo')
     end
-    it 'should not detect message without NG word' do
-        expect(@filter.detect?('hello world!')).to be false
+    it 'does not detect message without NG word' do
+        expect(@filter).not_to be_detect('hello world')
     end
 end
