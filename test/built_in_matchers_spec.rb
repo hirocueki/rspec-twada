@@ -3,7 +3,7 @@ require 'spec_helper'
 # [Built in matchers - RSpec Expectations - RSpec - Relish](https://relishapp.com/rspec/rspec-expectations/v/3-7/docs/built-in-matchers)
 
 RSpec.describe do
-    it "rspec expectation" do
+    it "Equality expectation" do
         expect(true).to be true
         expect(false).to be false
         expect(false).to be_falsey

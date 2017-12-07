@@ -1,4 +1,3 @@
-
 class MessageFilter
     def initialize(word)
         @word = word
